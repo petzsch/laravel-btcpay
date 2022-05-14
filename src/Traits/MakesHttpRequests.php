@@ -30,6 +30,7 @@ trait MakesHttpRequests
     {
         $config = config('laravel-btcpay');
 
+        //$config = function_exists('config') && !empty(config('laravel-btcpay')) ? config('laravel-btcpay') : null;
         if (empty($config['api_key'])) {
             throw InvalidConfigurationException::emptyApiKey();
         }
