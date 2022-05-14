@@ -1,6 +1,6 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay\Http\Controllers;
+namespace Petzsch\LaravelBtcpay\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
 

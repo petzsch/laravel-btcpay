@@ -1,11 +1,11 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay\Events;
+namespace Petzsch\LaravelBtcpay\Events;
 
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class BitpayWebhookReceived
+class BtcpayWebhookReceived
 {
     use Dispatchable;
     use SerializesModels;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay\Http\Controllers;
+namespace Petzsch\LaravelBtcpay\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Vrajroham\LaravelBitpay\Events\BitpayWebhookReceived;
-use Vrajroham\LaravelBitpay\Http\Middleware\VerifyWebhookSignature;
+use Petzsch\LaravelBtcpay\Events\BtcpayWebhookReceived;
+use Petzsch\LaravelBtcpay\Http\Middleware\VerifyWebhookSignature;
 
 class WebhookController extends Controller
 {
@@ -16,7 +16,7 @@ class WebhookController extends Controller
     public function handleWebhook(Request $request)
     {
         $payload = json_decode($request->getContent(), true);
-        BitpayWebhookReceived::dispatch($payload);
+        BtcpayWebhookReceived::dispatch($payload);
 
         return response('OK', 200);
     }

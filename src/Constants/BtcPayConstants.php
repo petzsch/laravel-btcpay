@@ -1,8 +1,8 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay\Constants;
+namespace Petzsch\LaravelBtcpay\Constants;
 
-interface BitPayConstants
+interface BtcPayConstants
 {
     // TODO: Deprecate 'Invoice Exceptions', 'Subscription Schedules' and 'Settlement Statuses' after upstream merge & update (^6.0): https://github.com/bitpay/php-bitpay-client-v2/pull/69
 

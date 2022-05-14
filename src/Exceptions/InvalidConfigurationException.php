@@ -1,33 +1,23 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay\Exceptions;
+namespace Petzsch\LaravelBtcpay\Exceptions;
 
 use Exception;
 
 class InvalidConfigurationException extends Exception
 {
-    public static function invalidNetworkName(): self
+    public static function emptyServerUrl(): InvalidConfigurationException
     {
-        return new static('Invalid network option provided in config. Should be livenet or testnet only.');
+        return new static('Server URL is empty. Set BTCPAY_SERVER_URL in your .env file.');
     }
 
-    public static function invalidStorageClass()
+    public static function emptyApiKey(): InvalidConfigurationException
     {
-        return new static('Invalid key storage class provided in config.');
+        return new static('BtcPay API-Key is empty. Set BTCPAY_API_KEY in your .env file.');
     }
 
-    public static function invalidOrEmptyPassword()
+    public static function emptyStoreID(): InvalidConfigurationException
     {
-        return new static('Password missing in config. Password is required to encrypt and decrypt keys on the filesystem.');
-    }
-
-    public static function emptyMerchantToken()
-    {
-        return new static('BitPay merchant token is empty. Set BITPAY_MERCHANT_TOKEN in your .env file.');
-    }
-
-    public static function emptyPayoutToken()
-    {
-        return new static('BitPay payout token is empty. Set BITPAY_PAYOUT_TOKEN in your .env file.');
+        return new static('BtcPay Store ID is empty. Set BTCPAY_STORE_ID in your .env file.');
     }
 }

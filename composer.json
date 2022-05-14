@@ -1,12 +1,12 @@
 {
-    "name": "vrajroham/laravel-bitpay",
-    "description": "BitPay wrapper for laravel",
+    "name": "petzsch/laravel-btcpay",
+    "description": "BtcPay wrapper for laravel",
     "keywords": [
-        "bitpay",
+        "btcpay",
         "BTC",
         "laravel"
     ],
-    "homepage": "https://github.com/vrajroham/laravel-bitpay",
+    "homepage": "https://github.com/petzsch/laravel-btcpay",
     "license": "MIT",
     "authors": [
         {
@@ -20,24 +20,31 @@
             "email": "iamalexstewart@gmail.com",
             "homepage": "https://github.com/alexstewartja",
             "role": "Developer"
-        }
+        },
+        {
+            "name": "Markus Petzsch",
+            "email": "markus@petzsch.eu",
+            "homepage": "https://www.petzsch.eu",
+            "role": "Developer"
+      }
     ],
     "require": {
         "php": ">=7.3 || ^8.0",
         "ext-json": "*",
-        "bitpay/sdk": "~6.0.2"
+        "btcpayserver/btcpayserver-greenfield-php": "^1.3",
+        "illuminate/foundation": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": ">=9.5"
     },
     "autoload": {
         "psr-4": {
-            "Vrajroham\\LaravelBitpay\\": "src"
+            "Petzsch\\LaravelBtcpay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vrajroham\\LaravelBitpay\\Tests\\": "tests"
+            "Petzsch\\LaravelBtcpay\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +57,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vrajroham\\LaravelBitpay\\LaravelBitpayServiceProvider"
+                "Petzsch\\LaravelBtcpay\\LaravelBtcpayServiceProvider"
             ],
             "aliases": {
-                "LaravelBitpay": "Vrajroham\\LaravelBitpay\\LaravelBitpayFacade"
+                "LaravelBtcpay": "Petzsch\\LaravelBtcpay\\LaravelBtcpayFacade"
             }
         }
     }

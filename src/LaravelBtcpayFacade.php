@@ -1,19 +1,19 @@
 <?php
 
-namespace Vrajroham\LaravelBitpay;
+namespace Petzsch\LaravelBtcpay;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class LaravelBitpayFacade.
+ * Class LaravelBtcpayFacade.
  */
-class LaravelBitpayFacade extends Facade
+class LaravelBtcpayFacade extends Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-bitpay';
+        return 'laravel-btcpay';
     }
 }
