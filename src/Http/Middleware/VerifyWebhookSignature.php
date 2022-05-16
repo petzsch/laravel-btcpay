@@ -4,6 +4,8 @@ namespace Petzsch\LaravelBtcpay\Http\Middleware;
 
 use Closure;
 use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class VerifyWebhookSignature
@@ -11,12 +13,12 @@ class VerifyWebhookSignature
     /**
      * Handle the incoming request.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Closure                 $next
+     * @param Request $request
+     * @param Closure                  $next
      *
-     * @throws \Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException
+     * @throws AccessDeniedHttpException
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function handle($request, Closure $next)
     {
