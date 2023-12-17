@@ -1,3 +1,5 @@
+This project is not maintained anymore. And therefore was archived.
+
 # LaravelBtcPay
 
 ![LaravelBtcPay Social Image](https://banners.beyondco.de/LaravelBtcPay.png?theme=light&packageManager=composer+require&packageName=petzsch%2Flaravel-btcpay&pattern=circuitBoard&style=style_1&description=Transact+in+Bitcoin%2C+Litecoin+and+10%2B+other+BtcPay-supported+cryptocurrencies+within+your+Laravel+application.&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
